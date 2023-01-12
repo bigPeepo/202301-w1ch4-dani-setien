@@ -1,0 +1,77 @@
+@import url("/node_modules/@fontsource/nunito/400.css");
+@import url("/node_modules/@fontsource/nunito/800.css");
+
+:root {
+  --typography-main: "Nunito", sans-serif;
+  --color-brand: #ed6436;
+  --padding-horizontal: 70px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: var(--typography-main);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+main {
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 18vmin;
+  padding: 22px;
+}
+
+@media only screen and (max-width: 400px) {
+  .main-header {
+    justify-content: center;
+  }
+
+  .main-header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-header__introduction {
+  color: var(--color-brand);
+  font-weight: 800;
+}
+
+.main-header__button {
+  display: inline-block;
+  border: none;
+  background-color: var(--color-brand);
+  height: 50px;
+  width: 100px;
+  border-radius: 0em 3em 3em 3em;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.main-header__title {
+  text-align: center;
+}
